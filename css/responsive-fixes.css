@@ -1,0 +1,127 @@
+/* Tools section */
+.tools-section {
+    width: 100%;
+    padding: 60px 0;
+    background: #fff;
+    margin: 0;
+}
+
+.tools {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.tools__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+}
+
+.tools__item {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    height: auto;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.tools__item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    border-color: #E5322D;
+}
+
+.tools__item a {
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .tools__container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .tools__item {
+        min-height: 200px;
+    }
+
+    .tools__item a {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tools__container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .tools {
+        padding: 0 15px;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .tools__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+    .tools__container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .tools {
+        max-width: 1200px;
+    }
+}
+
+/* Section spacing */
+section {
+    width: 100%;
+    margin: 0;
+}
+
+/* Utility classes */
+.text-center { text-align: center; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 3rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 3rem; }
+
+/* Fix any remaining layout issues */
+.main-content {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure proper content flow */
+body {
+    line-height: 1.6;
+    font-family: 'Open Sans', Arial, sans-serif;
+}

@@ -1,0 +1,40 @@
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://your-domain.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /css/
+Disallow: /js/
+Disallow: /fonts/
+Disallow: /attached_assets/
+
+# Allow important CSS and JS for SEO
+Allow: /assets/css/style.css
+Allow: /js/interactive-effects.js
+
+# Block duplicate content
+Disallow: /*?*
+Disallow: /*.pdf$
+
+# Popular PDF converter pages (high priority)
+Allow: /jpg-to-pdf
+Allow: /word-to-pdf-convert
+Allow: /excel-to-pdf-convert
+Allow: /pdf-to-jpg
+Allow: /pdf-to-word-convert
+Allow: /pdf-to-excel
+Allow: /merge-pdf-text
+Allow: /split-pdf
+Allow: /compress-pdf
+
+# Cache policy
+User-agent: *
+Disallow: /cache/

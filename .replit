@@ -1,0 +1,37 @@
+modules = ["php-8.2", "web", "nodejs-20"]
+
+[nix]
+channel = "stable-25_05"
+
+[workflows]
+runButton = "PHP Server Fix"
+
+[[workflows.workflow]]
+name = "PHP Server"
+author = 44527304
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "php -S 0.0.0.0:5000 -t ."
+
+[[workflows.workflow]]
+name = "PHP Server Fix"
+author = 44527304
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "pkill -f \"php -S\""
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "sleep 2"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "php -S 0.0.0.0:5000 -t ."
+
+[[ports]]
+localPort = 5000
+externalPort = 80
